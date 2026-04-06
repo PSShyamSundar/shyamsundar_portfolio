@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shyam Sundar P S - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1a1a2e;
+      background: #f5f5f5;
+      line-height: 1.5;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .resume {
+      max-width: 794px;
+      margin: 20px auto;
+      background: #fff;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    @media print {
+      body { background: #fff; margin: 0; }
+      .resume { box-shadow: none; margin: 0; max-width: 100%; }
+      .no-print { display: none !important; }
+      @page { margin: 0.4in; size: A4; }
+    }
+
+    /* Header */
+    .resume-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+      color: #fff;
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .resume-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .resume-header .title {
+      font-size: 14px;
+      color: #00cec9;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .header-contact {
+      text-align: right;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .header-contact a {
+      color: #ffd93d;
+      text-decoration: none;
+    }
+
+    /* Two column layout */
+    .resume-body {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      min-height: 700px;
+    }
+
+    .main-col {
+      padding: 28px 32px;
+    }
+
+    .side-col {
+      background: #f8f9fa;
+      padding: 28px 24px;
+      border-left: 2px solid #e9ecef;
+    }
+
+    /* Section titles */
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #00cec9;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #00cec9;
+    }
+
+    .section { margin-bottom: 22px; }
+
+    /* Summary */
+    .summary {
+      font-size: 12.5px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    /* Experience / Project items */
+    .item { margin-bottom: 16px; }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .item-title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .item-date {
+      font-size: 11px;
+      color: #888;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .item-subtitle {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    .item ul {
+      padding-left: 16px;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .item li {
+      margin-bottom: 3px;
+      line-height: 1.6;
+    }
+
+    /* Sidebar sections */
+    .side-section { margin-bottom: 22px; }
+
+    .side-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #1a1a2e;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #ffd93d;
+    }
+
+    .skill-group { margin-bottom: 12px; }
+
+    .skill-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .skill-tag {
+      background: #e8f8f7;
+      color: #1a1a2e;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #d0f0ee;
+    }
+
+    .cert-item {
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .cert-item strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    .cert-item span {
+      color: #888;
+      font-size: 11px;
+    }
+
+    .edu-item { margin-bottom: 10px; }
+
+    .edu-item h4 {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .edu-item p {
+      font-size: 11.5px;
+      color: #666;
+    }
+
+    .edu-item .edu-year {
+      font-size: 11px;
+      color: #00cec9;
+      font-weight: 600;
+    }
+
+    /* Print button */
+    .print-bar {
+      text-align: center;
+      padding: 16px;
+      background: #f5f5f5;
+    }
+
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 32px;
+      background: #1a1a2e;
+      color: #ffd93d;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .print-btn:hover {
+      background: #00cec9;
+      color: #1a1a2e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print">
+    <button class="print-btn" onclick="window.print()">
+      📄 Download as PDF (Ctrl+P → Save as PDF)
+    </button>
+  </div>
+
+  <div class="resume">
+    <!-- HEADER -->
+    <div class="resume-header">
+      <div>
+        <h1>Shyam Sundar P S</h1>
+        <div class="title">Aspiring Software Developer & Data Analyst</div>
+      </div>
+      <div class="header-contact">
+        <a href="mailto:shyamsundarps2003@gmail.com">shyamsundarps2003@gmail.com</a><br>
+        +91 9361502892<br>
+        <a href="https://www.linkedin.com/in/shyamsundarps/">linkedin.com/in/shyamsundarps</a>
+      </div>
+    </div>
+
+    <div class="resume-body">
+      <!-- MAIN COLUMN -->
+      <div class="main-col">
+
+        <!-- Summary -->
+        <div class="section">
+          <div class="section-title">Professional Summary</div>
+          <p class="summary">
+            Enthusiastic B.Tech graduate with a strong foundation in software development and data analytics.
+            Passionate about Python, data analysis, and building real-world solutions. Skilled in deep learning,
+            time-series forecasting, and exploratory data analysis. Strong in teamwork, adaptability, and
+            problem-solving with a drive to transform data into meaningful insights.
+          </p>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+          <div class="section-title">Projects</div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Energy Consumption Prediction (ENERGYGEN)</span>
+            </div>
+            <ul>
+              <li>Built a GRU-based deep learning model to forecast energy usage using temperature, occupancy, and renewable energy data</li>
+              <li>Implemented time-series analysis techniques for improved prediction accuracy</li>
+              <li>Processed and engineered features from multi-source datasets for model training</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Hybrid CNN-TCN Energy Model</span>
+            </div>
+            <ul>
+              <li>Designed a hybrid deep learning architecture combining CNN and TCN for energy consumption forecasting</li>
+              <li>Achieved enhanced temporal pattern recognition through architectural innovation</li>
+              <li>Validated model performance using RMSE and MAE metrics</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-header">
+              <span class="item-title">Zomato Data Analytics</span>
+            </div>
+            <ul>
+              <li>Performed comprehensive EDA using Python to analyze customer preferences and pricing strategies</li>
+              <li>Created insightful data visualizations to identify market trends on the Zomato platform</li>
+              <li>Delivered actionable insights through statistical analysis and visualization libraries</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="side-col">
+
+        <!-- Education -->
+        <div class="side-section">
+          <div class="side-title">Education</div>
+          <div class="edu-item">
+            <h4>B.Tech — Computer Science</h4>
+            <p>Velammal College of Engineering and Technology</p>
+            <span class="edu-year">2021 — 2025</span>
+          </div>
+          <div class="edu-item">
+            <h4>Higher Secondary & Secondary</h4>
+            <p>Madurai</p>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="side-section">
+          <div class="side-title">Technical Skills</div>
+
+          <div class="skill-group">
+            <div class="skill-label">Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Libraries</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">NumPy</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Tools</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">Excel</span>
+              <span class="skill-tag">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-label">Platforms</div>
+            <div class="skill-tags">
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Jupyter</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="side-section">
+          <div class="side-title">Certifications</div>
+          <div class="cert-item">
+            <strong>Google Data Analytics</strong>
+            <span>Professional Certificate</span>
+          </div>
+          <div class="cert-item">
+            <strong>Java Beginner to Master</strong>
+            <span>Comprehensive Programming</span>
+          </div>
+          <div class="cert-item">
+            <strong>SQL Basics</strong>
+            <span>Database Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="side-section">
+          <div class="side-title">Soft Skills</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Teamwork</span>
+            <span class="skill-tag">Adaptability</span>
+            <span class="skill-tag">Management</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
