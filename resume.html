@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shyam Sundar P S - Resume</title>
+  <title>Shyam Sundar - Resume</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Inter', Arial, sans-serif;
@@ -22,14 +29,29 @@
       max-width: 794px;
       margin: 20px auto;
       background: #fff;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     }
 
     @media print {
-      body { background: #fff; margin: 0; }
-      .resume { box-shadow: none; margin: 0; max-width: 100%; }
-      .no-print { display: none !important; }
-      @page { margin: 0.4in; size: A4; }
+      body {
+        background: #fff;
+        margin: 0;
+      }
+
+      .resume {
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      @page {
+        margin: 0.4in;
+        size: A4;
+      }
     }
 
     /* Header */
@@ -95,7 +117,9 @@
       border-bottom: 2px solid #00cec9;
     }
 
-    .section { margin-bottom: 22px; }
+    .section {
+      margin-bottom: 22px;
+    }
 
     /* Summary */
     .summary {
@@ -105,7 +129,9 @@
     }
 
     /* Experience / Project items */
-    .item { margin-bottom: 16px; }
+    .item {
+      margin-bottom: 16px;
+    }
 
     .item-header {
       display: flex;
@@ -145,7 +171,9 @@
     }
 
     /* Sidebar sections */
-    .side-section { margin-bottom: 22px; }
+    .side-section {
+      margin-bottom: 22px;
+    }
 
     .side-title {
       font-size: 12px;
@@ -158,7 +186,9 @@
       border-bottom: 2px solid #ffd93d;
     }
 
-    .skill-group { margin-bottom: 12px; }
+    .skill-group {
+      margin-bottom: 12px;
+    }
 
     .skill-label {
       font-size: 11px;
@@ -200,7 +230,9 @@
       font-size: 11px;
     }
 
-    .edu-item { margin-bottom: 10px; }
+    .edu-item {
+      margin-bottom: 10px;
+    }
 
     .edu-item h4 {
       font-size: 13px;
@@ -247,6 +279,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="print-bar no-print">
@@ -293,7 +326,8 @@
               <span class="item-title">Energy Consumption Prediction (ENERGYGEN)</span>
             </div>
             <ul>
-              <li>Built a GRU-based deep learning model to forecast energy usage using temperature, occupancy, and renewable energy data</li>
+              <li>Built a GRU-based deep learning model to forecast energy usage using temperature, occupancy, and
+                renewable energy data</li>
               <li>Implemented time-series analysis techniques for improved prediction accuracy</li>
               <li>Processed and engineered features from multi-source datasets for model training</li>
             </ul>
@@ -304,7 +338,8 @@
               <span class="item-title">Hybrid CNN-TCN Energy Model</span>
             </div>
             <ul>
-              <li>Designed a hybrid deep learning architecture combining CNN and TCN for energy consumption forecasting</li>
+              <li>Designed a hybrid deep learning architecture combining CNN and TCN for energy consumption forecasting
+              </li>
               <li>Achieved enhanced temporal pattern recognition through architectural innovation</li>
               <li>Validated model performance using RMSE and MAE metrics</li>
             </ul>
@@ -413,4 +448,5 @@
   </div>
 
 </body>
+
 </html>
